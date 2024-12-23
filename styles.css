@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --text-dark: #000000;
+    --text-light: #767268;
+    --extra-light: #eef9f8;
+    --white: #ffffff;
+    --header-font: "Playfair Display", serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section__container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.section__header {
+    position: relative;
+    isolation: isolate;
+    width: fit-content;
+    margin-inline: auto;
+    padding-bottom: 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: var(--header-font);
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.section__header::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 3rem;
+    background-color: var(--text-dark);
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    color: var(--white);
+    background-color: var(--text-dark);
+    transition: 0.4s;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: var(--text-light);
+}
+
+img {
+    display: flex;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    position: fixed;
+    isolation: isolate;
+    width: 100%;
+    z-index: 9;
+}
+
+.nav__header {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--extra-light);
+}
+
+.nav__logo img {
+    max-width: 125px;
+}
+
+.nav__menu__btn {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+
+.nav__links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--extra-light);
+    z-index: -1;
+    transition: transform 0.3s;
+}
+
+.nav__links.open {
+    transform: translateY(100%);
+}
+
+.nav__links a {
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.header__container {
+    display: grid;
+    padding-block: 0;
+    overflow: hidden;
+}
+
+.header__content {
+    padding-block: 0 5rem;
+}
+
+.header__content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-family: var(--header-font);
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.header__content h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: var(--header-font);
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.header__btn {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+@media (width > 540px) {
+    .header__content h1 {
+        font-size: 4.5rem;
+    }
+
+}
+
+@media (width > 768px) {
+    nav {
+        position: absolute;
+        padding: 2rem 1.5rem;
+        max-width: 1200px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .nav__header {
+        flex: 1;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .nav__menu__btn {
+        display: none;
+    }
+
+    .nav__links {
+        position: static;
+        padding: 0;
+        width: fit-content;
+        flex-direction: row;
+        background-color: transparent;
+        transform: none !important;
+    }
+
+    .nav__links a:hover {
+        color: var(--text-dark);
+    }
+
+    .header__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        isolation: isolate;
+    }
+
+    .header__image{
+        grid-area: 1/2/2/3;
+        position: relative;
+        height: 100%;
+    }
+
+    .header__image img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: unset;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .header__content {
+        padding-block: 10rem;
+    }
+
+    .header__content :is(h1, h2, .header__btn){
+        text-align: left;
+    }
+
+    .header__content h1{
+        font-size: 5rem;
+    }
+
+    
+
+}
+
+@media (width > 1024px){
+    .header__content{
+        padding-block: 15rem 12rem;
+    }
+}
