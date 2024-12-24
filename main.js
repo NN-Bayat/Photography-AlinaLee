@@ -23,24 +23,63 @@ const ScrollOption = {
     duration: 1000,
 };
 
-ScrollReveal().reveal(".header__image img",{
+ScrollReveal().reveal(".header__image img", {
     ...ScrollOption,
     origin: "right",
 });
 
-ScrollReveal().reveal(".header__content h1",{
+ScrollReveal().reveal(".header__content h1", {
     ...ScrollOption,
     delay: 500,
 });
 
-ScrollReveal().reveal(".header__content h2",{
+ScrollReveal().reveal(".header__content h2", {
     ...ScrollOption,
     delay: 1000,
 });
 
-ScrollReveal().reveal(".header__btn",{
+ScrollReveal().reveal(".header__btn", {
     ...ScrollOption,
     delay: 1500,
 });
 
+ScrollReveal().reveal(".about__image img", {
+    ...ScrollOption,
+    origin: "left",
+});
 
+ScrollReveal().reveal(".about__content .section__header", {
+    ...ScrollOption,
+    delay: 500,
+});
+
+ScrollReveal().reveal(".about__content p", {
+    ...ScrollOption,
+    delay: 1000,
+    interval: 500,
+});
+
+ScrollReveal().reveal(".about__btn", {
+    ...ScrollOption,
+    delay: 2000,
+});
+
+ScrollReveal().reveal(".blog__card", {
+    duration: 1000,
+    interval: 500,
+});
+
+ScrollReveal().reveal(".blog__btn", {
+    ...ScrollOption,
+    delay: 2000,
+});
+
+ScrollReveal().reveal(".contact__image img", {
+    ...ScrollOption,
+});
+
+ScrollReveal().reveal(".footer__col", {
+    ...ScrollOption,
+    delay: 1000,
+    interval: 500,
+});
